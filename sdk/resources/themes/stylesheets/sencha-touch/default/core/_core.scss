@@ -2,7 +2,7 @@
 @import 'compass/css3/box-sizing';
 @import 'blueprint/typography';
 
-$experimental-support-for-mozilla: false;
+$experimental-support-for-mozilla: true;
 $experimental-support-for-opera: false;
 $experimental-support-for-microsoft: false;
 $experimental-support-for-khtml: false;
@@ -12,6 +12,7 @@ html, body {
   font-weight: normal;
   position: relative;
   -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
 }
 
 body.x-desktop {
