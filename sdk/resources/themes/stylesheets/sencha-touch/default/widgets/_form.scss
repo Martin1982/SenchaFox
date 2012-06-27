@@ -372,6 +372,7 @@ $form-scrollable-fields: '.x-field-slider, .x-field-toggle';
 
     .x-field-input {
       -webkit-box-flex: 1;
+      -moz-box-flex: 1; // @todo @invalid-property
 
       .x-input-el {
         -webkit-text-fill-color: #000;

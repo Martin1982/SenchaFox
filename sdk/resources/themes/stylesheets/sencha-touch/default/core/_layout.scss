@@ -64,17 +64,21 @@
 
   .x-layout-hbox, .x-layout-vbox {
     display: -webkit-box;
+    display: -moz-box;
     > * {
       -webkit-box-flex: 0;
+      -moz-box-flex: 0;
     }
   }
 
   .x-layout-hbox {
     -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
   }
 
   .x-layout-vbox {
     -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
   }
 
   .x-layout-hbox > .x-layout-box-item {
@@ -106,17 +110,20 @@
 
   .x-container, .x-body {
     display: -webkit-box;
+    display: -moz-box;
   }
 
   .x-body {
     overflow: hidden;
     -webkit-box-flex: 1;
+    -moz-box-flex: 1;
     min-width: 100%;
     min-height: 100%;
   }
 
   .x-body > .x-inner, .x-container > .x-inner {
     -webkit-box-flex: 1;
+    -moz-box-flex: 1;
     min-width: 100%;
     min-height: 100%;
     position: relative;
@@ -124,16 +131,22 @@
 
   .x-docking-horizontal {
     display: -webkit-box;
+    display: -moz-box;
     -webkit-box-flex: 1;
+    -moz-box-flex: 1;
     -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal; // @todo @invalid-property
     min-width: 100%;
     min-height: 100%;
   }
 
   .x-docking-vertical {
     display: -webkit-box;
+    display: -moz-box;
     -webkit-box-flex: 1;
+    -moz-box-flex: 1;
     -webkit-box-orient: vertical;
+    -moz-box-orient: vertical; // @todo @invalid-property
     min-width: 100%;
     min-height: 100%;
   }
@@ -143,8 +156,11 @@
     width: 100%;
     height: 100%;
     display: -webkit-box;
+    display: -moz-box;
     -webkit-box-align: center;
+    -moz-box-align: center;
     -webkit-box-pack: center;
+    -moz-box-pack: center;
   }
 
   .x-floating {
@@ -154,6 +170,7 @@
   .x-centered > * {
     position: relative !important;
     -webkit-box-flex: 0 !important;
+    -moz-box-flex: 0 !important;
   }
 
   .x-size-change-detector {
@@ -201,6 +218,10 @@
 
   .x-ios .x-scroll-scroller {
     -webkit-transform: translate3d(0, 0, 0);
+  }
+
+  .x-firefox .x-scroll-scroller {
+    -moz-transform: translate3d(0, 0, 0);
   }
 
   .x-scroll-stretcher {
@@ -316,6 +337,7 @@
 
     > :nth-child(2) {
       -webkit-transform-origin: 0% 0%;
+      -moz-transform-origin: 0% 0%; // @todo @untested-property
       background: none;
       content: url(data:image/bmp;base64,Qk08AAAAAAAAADYAAAAoAAAAAQAAAAEAAAABABAAAAAAAAYAAAASCwAAEgsAAAAAAAAAAAAAxhgAAAAA);
     }

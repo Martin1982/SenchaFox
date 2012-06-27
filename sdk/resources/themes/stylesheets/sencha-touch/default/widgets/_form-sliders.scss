@@ -97,6 +97,7 @@
     border: 1px solid darken($form-light, 15%);
     @include background-gradient($form-light, 'recessed');
     -webkit-box-flex: 0;
+    -moz-box-flex: 0; // @todo @invalid-property
 
     // Masking the slider doesn't work in iOS 3, so we're fake-masking the outer area
     // UPDATED: Doesnt fly on Android...

@@ -60,6 +60,7 @@ $include-button-highlights: $include-highlights !default;
     position: relative;
     overflow: hidden;
     -webkit-user-select: none;
+    -moz-user-select: none;
 
     // Default icon style
     .x-button-icon {

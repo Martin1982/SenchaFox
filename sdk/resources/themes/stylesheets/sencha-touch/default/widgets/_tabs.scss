@@ -117,6 +117,7 @@ $tabs-top-height: $global-row-height - .8em;
 
   .x-tab {
     -webkit-user-select: none;
+    -moz-user-select: none;
     overflow: visible !important;
 
     .x-button-label {
