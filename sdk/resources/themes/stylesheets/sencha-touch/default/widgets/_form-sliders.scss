@@ -86,6 +86,7 @@
       border: .1em solid rgba(#000, .1);
       border-bottom: 0;
       -webkit-box-shadow: rgba(#fff,.7) 0 .1em 0;
+      -moz-box-shadow: rgba(#fff,.7) 0 .1em 0; // @todo @untested-property
       @if $include-border-radius { @include border-radius($form-slider-size/2); }
     }
   }
@@ -97,7 +98,7 @@
     border: 1px solid darken($form-light, 15%);
     @include background-gradient($form-light, 'recessed');
     -webkit-box-flex: 0;
-    -moz-box-flex: 0; // @todo @invalid-property
+    -moz-box-flex: 0; // @todo @untested-property
 
     // Masking the slider doesn't work in iOS 3, so we're fake-masking the outer area
     // UPDATED: Doesnt fly on Android...

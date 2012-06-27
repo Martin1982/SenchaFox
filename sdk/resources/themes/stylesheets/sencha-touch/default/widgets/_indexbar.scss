@@ -28,6 +28,7 @@ $index-bar-color: darken(desaturate($base-color, 5%), 15%) !default;
 @mixin sencha-indexbar {
   .x-indexbar-wrapper {
     -webkit-box-pack: end !important;
+    -moz-box-pack: end !important; // @todo @untested-property
     box-pack: end !important;
     pointer-events: none;
   }
@@ -51,7 +52,7 @@ $index-bar-color: darken(desaturate($base-color, 5%), 15%) !default;
     min-height: 0 !important;
     height: auto !important;
     -webkit-box-flex: 0 !important;
-    -moz-box-flex: 0 !important; // @todo @invalid-property
+    -moz-box-flex: 0 !important; // @todo @untested-property
 
     > div {
       color: $index-bar-color;

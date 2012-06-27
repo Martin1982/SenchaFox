@@ -2,6 +2,7 @@
   background-color: #edeae2; //GMap tan background
   * {
       -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box; // @todo @untested-property
       box-sizing: content-box;
   }
 }

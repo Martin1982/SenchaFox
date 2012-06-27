@@ -42,21 +42,26 @@ $toolbar-search-left-padding: 1.67em;
   .x-spinner .x-input-el,
   .x-field-select .x-input-el {
     -webkit-text-fill-color: #000;
+    -moz-text-fill-color: #000; // @todo @untested-property
     -webkit-opacity: 1;
+    -moz-opacity: 1; // @todo @untested-property
   }
 
   .x-spinner.x-item-disabled .x-input-el,
   .x-field-select.x-item-disabled .x-input-el {
     -webkit-text-fill-color: currentcolor;
+    -moz-text-fill-color: currentcolor; // @todo @untested-property
   }
 
   //and inside toolbars
   .x-toolbar .x-field-select .x-input-el {
     -webkit-text-fill-color: #fff;
+    -moz-text-fill-color: #fff; // @todo @untested-property
   }
 
   .x-toolbar .x-field-select.x-item-disabled .x-input-el {
     -webkit-text-fill-color: rgba(255,255,255,.6);
+    -moz-text-fill-color: rgba(255,255,255,.6); // @todo @untested-property
   }
 
   .x-toolbar {
@@ -92,6 +97,7 @@ $toolbar-search-left-padding: 1.67em;
 
         @if $include-highlights {
           -webkit-box-shadow: inset $toolbar-input-border-color 0 .1em 0, inset $toolbar-input-border-color 0 -.1em 0, inset $toolbar-input-border-color .1em 0 0, inset $toolbar-input-border-color -.1em 0 0, inset rgba(#000, .5) 0 .15em .4em;
+          -moz-box-shadow: inset $toolbar-input-border-color 0 .1em 0, inset $toolbar-input-border-color 0 -.1em 0, inset $toolbar-input-border-color .1em 0 0, inset $toolbar-input-border-color -.1em 0 0, inset rgba(#000, .5) 0 .15em .4em; // @todo @untested-property
         }
       }
     }
@@ -109,6 +115,7 @@ $toolbar-search-left-padding: 1.67em;
       background: transparent;
       min-height: 0;
       -webkit-appearance: none;
+      -moz-appearance: none; // @todo @untested-property
       padding: 0em .3em;
       margin: 0;
 
@@ -132,6 +139,7 @@ $toolbar-search-left-padding: 1.67em;
 
     .x-field-select {
       -webkit-box-shadow: none;
+      -moz-box-shadow: none; // @todo @untested-property
 
       .x-form-field {
         height: 1.4em;
@@ -160,9 +168,13 @@ $toolbar-search-left-padding: 1.67em;
         @if $include-border-radius { @include border-right-radius($toolbar-input-height/2); }
         @if $include-highlights {
             -webkit-mask: theme_image($theme-name, "select_mask.png");
+            -moz-mask: theme_image($theme-name, "select_mask.png"); // @todo @untested-property
             -webkit-mask-position: right top;
+            -moz-mask-position: right top; // @todo @untested-property
             -webkit-mask-repeat: repeat-y;
+            -moz-mask-repeat: repeat-y; // @todo @untested-property
             -webkit-mask-size: $toolbar-select-overflow-mask-width .05em;
+            -moz-mask-size: $toolbar-select-overflow-mask-width .05em; // @todo @untested-property
         }
         @else {
             width: 0.5em !important;

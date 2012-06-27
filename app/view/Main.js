@@ -12,20 +12,25 @@ Ext.define("SenchaFox.view.Main", {
                 title: 'Welcome',
                 iconCls: 'home',
 
-                styleHtmlContent: true,
-                scrollable: true,
-
-                items: {
-                    docked: 'top',
-                    xtype: 'titlebar',
-                    title: 'Welcome to Sencha Touch 2'
+                defaults: {
+                    styleHtmlContent: true
                 },
+                scrollable: false,
 
-                html: [
-                    "You've just generated a new Sencha Touch 2 project. What you're looking at right now is the ",
-                    "contents of <a target='_blank' href=\"app/view/Main.js\">app/view/Main.js</a> - edit that file ",
-                    "and refresh to change what's rendered here."
-                ].join("")
+                items: [
+                    {
+                        docked: 'top',
+                        xtype: 'titlebar',
+                        title: 'Welcome to Sencha Touch 2'
+                    },
+                    {
+                        xtype: 'carousel',
+                        items: [
+                            { html: 'item 1' },
+                            { html: 'item 2' }
+                        ]
+                    }
+                ]
             },
             {
                 title: 'Get Started',

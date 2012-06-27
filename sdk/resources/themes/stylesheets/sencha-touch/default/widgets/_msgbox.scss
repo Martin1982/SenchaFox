@@ -10,6 +10,7 @@
     padding: 0.8em;
     margin: .5em;
     -webkit-box-shadow: rgba(#000, .4) 0 .1em .5em;
+    -moz-box-shadow: rgba(#000, .4) 0 .1em .5em; // @todo @untested-property
     @if $include-border-radius { @include border-radius($panel-border-radius); }
     border: .15em solid $base-color;
 
@@ -18,22 +19,27 @@
       margin: 0 0.8em 0 0.5em;
       background: #fff;
       -webkit-mask-size: 100%;
+      -moz-mask-size: 100%; // @todo @untested-property
     }
 
     .x-msgbox-info {
       -webkit-mask-image: theme_image($theme-name, "pictos/info.png");
+      -moz-mask-image: theme_image($theme-name, "pictos/info.png"); // @todo @untested-property
     }
 
     .x-msgbox-warning {
       -webkit-mask-image: theme_image($theme-name, "pictos/warning_black.png");
+      -moz-mask-image: theme_image($theme-name, "pictos/warning_black.png"); // @todo @untested-property
     }
 
     .x-msgbox-question {
       -webkit-mask-image: theme_image($theme-name, "pictos/help.png");
+      -moz-mask-image: theme_image($theme-name, "pictos/help.png"); // @todo @untested-property
     }
 
     .x-msgbox-error {
       -webkit-mask-image: theme_image($theme-name, "pictos/minus_black2.png");
+      -moz-mask-image: theme_image($theme-name, "pictos/minus_black2.png"); // @todo @untested-property
     }
 
     .x-title {
@@ -48,6 +54,7 @@
     .x-toolbar {
       background: transparent none;
       -webkit-box-shadow: none;
+      -moz-box-shadow: none; // @todo @untested-property
 
       &.x-docked-top {
         border-bottom: 0;
@@ -69,6 +76,7 @@
       min-height:1.5em;
       padding-right: 0 !important;
       -webkit-appearance: none;
+      -moz-appearance: none; // @todo @untested-property
     }
 
     .x-field-input {

@@ -13,6 +13,7 @@
 
 .x-video-ghost {
     -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto; // @todo @untested-property
     background: #000 url() center center no-repeat;
 }
 

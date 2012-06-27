@@ -92,7 +92,9 @@ $list-disclosure-round-size: 1.5em;
     .x-list-disclosure {
       overflow: visible;
       -webkit-mask: 0 0 theme_image($theme-name, "disclosure.png") no-repeat;
+      -moz-mask: 0 0 theme_image($theme-name, "disclosure.png") no-repeat; // @todo @untested-property
       -webkit-mask-size: $list-disclosure-size;
+      -moz-mask-size: $list-disclosure-size; // @todo @untested-property
       @include background-gradient(saturate($active-color, 10%));
       width: $list-disclosure-size;
       height: $list-disclosure-size;
@@ -209,7 +211,9 @@ $list-disclosure-round-size: 1.5em;
     .x-list-disclosure {
       overflow: hidden;
       -webkit-mask: 0 0 theme_image($theme-name, "disclosure2.png") no-repeat;
+      -moz-mask: 0 0 theme_image($theme-name, "disclosure2.png") no-repeat; // @todo @untested-property
       -webkit-mask-size: $list-disclosure-round-size;
+      -moz-mask-size: $list-disclosure-round-size; // @todo @untested-property
       @include background-gradient(lighten(desaturate($base-color, 10), 10));
       width: $list-disclosure-round-size;
       height: $list-disclosure-round-size;

@@ -16,6 +16,7 @@ $panel-border-radius: .3em;
       padding: 6px;
       @if $include-border-radius { @include border-radius($panel-border-radius); }
       -webkit-box-shadow: rgba(0,0,0,.8) 0 .2em .6em;
+      -moz-box-shadow: rgba(0,0,0,.8) 0 .2em .6em; // @todo @untested-property
       @include background-gradient(darken($base-color, 40%), 'flat');
 
       &.x-floating-light {
@@ -42,10 +43,13 @@ $panel-border-radius: .3em;
       top: 0;
       z-index: 1;
       -webkit-mask: 0 0 theme_image($theme-name, "tip_horizontal.png") no-repeat;
+      -moz-mask: 0 0 theme_image($theme-name, "tip_horizontal.png") no-repeat; // @todo @untested-property
       -webkit-mask-size: $anchor-width $anchor-height;
+      -moz-mask-size: $anchor-width $anchor-height; // @todo @untested-property
       overflow: hidden;
       background-color: darken($base-color, 40%);
       -webkit-transform-origin: 0% 0%;
+      -moz-transform-origin: 0% 0%; // @todo @untested-property
 
       &.x-anchor-top {
         margin-left: -($anchor-width / 2);
@@ -54,18 +58,21 @@ $panel-border-radius: .3em;
 
       &.x-anchor-bottom {
         -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg); // @todo @untested-property
         margin-left: $anchor-width / 2;
         margin-top: $anchor-height - $anchor-offset;
       }
 
       &.x-anchor-left {
           -webkit-transform: rotate(270deg);
+          -moz-transform: rotate(270deg); // @todo @untested-property
           margin-left: -$anchor-height;
           margin-top: -$anchor-offset;
       }
 
       &.x-anchor-right {
           -webkit-transform: rotate(90deg);
+          -moz-transform: rotate(90deg); // @todo @untested-property
           margin-left: $anchor-height;
           margin-top: 0;
       }

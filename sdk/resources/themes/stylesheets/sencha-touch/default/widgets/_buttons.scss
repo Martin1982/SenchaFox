@@ -74,6 +74,7 @@ $include-button-highlights: $include-highlights !default;
         width: 1.3em;
         height: 1.3em;
         -webkit-mask-size: 1.3em;
+        -moz-mask-size: 1.3em; // @todo @untested-property
       }
     }
 
@@ -172,7 +173,9 @@ $include-button-highlights: $include-highlights !default;
       @include insertion($mask-width, $mask-height, -$button-stroke-weight, auto);
       z-index: 2;
       -webkit-mask: $mask-offset 0 theme_image($theme-name, "tip.png") no-repeat;
+      -moz-mask: $mask-offset 0 theme_image($theme-name, "tip.png") no-repeat; // @todo @untested-property
       -webkit-mask-size: $mask-width $mask-height;
+      -moz-mask-size: $mask-width $mask-height; // @todo @untested-property
       overflow: hidden;
     }
   }
@@ -195,6 +198,7 @@ $include-button-highlights: $include-highlights !default;
     padding-right: .4em;
     &:before, &:after {
       -webkit-mask: -$mask-offset 0 theme_image($theme-name, "tip_right.png") no-repeat;
+      -moz-mask: -$mask-offset 0 theme_image($theme-name, "tip_right.png") no-repeat; // @todo @untested-property
     }
     &:before {
       right: - $tip-width;
@@ -223,6 +227,7 @@ $include-button-highlights: $include-highlights !default;
 
     .x-button-icon {
       -webkit-mask-size: $toolbar-icon-size;
+      -moz-mask-size: $toolbar-icon-size; // @todo @untested-property
       width: $toolbar-icon-size;
       height: $toolbar-icon-size;
     }

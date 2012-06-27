@@ -149,6 +149,7 @@ $tabs-top-height: $global-row-height - .8em;
       line-height: 1.2em;
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
+      -moz-font-smoothing: antialiased; // @todo @invalid-property
     }
 
     .x-badge {
@@ -174,6 +175,7 @@ $tabs-top-height: $global-row-height - .8em;
 
       .x-button-icon {
         -webkit-mask-size: $tabs-bottom-icon-size;
+        -moz-mask-size: $tabs-bottom-icon-size; // @todo @invalid-property
         width: $tabs-bottom-icon-size;
         height: $tabs-bottom-icon-size;
         display: block;
@@ -188,6 +190,7 @@ $tabs-top-height: $global-row-height - .8em;
         line-height: 12px;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased; // @todo @invalid-property
       }
     }
   }
