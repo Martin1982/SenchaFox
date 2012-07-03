@@ -247,7 +247,7 @@ If you are unsure which license is appropriate for your use, please contact the 
                 return cls.override(overrides);
             }
             else {
-                Ext.apply(cls.prototype, overrides);
+                return Ext.apply(cls.prototype, overrides);
             }
         }
     });
@@ -332,7 +332,7 @@ If you are unsure which license is appropriate for your use, please contact the 
                 return 'object';
             }
 
-            Ext.Error.raise({
+            return Ext.Error.raise({
                 sourceClass: 'Ext',
                 sourceMethod: 'typeOf',
                 msg: 'Failed to determine the type of the specified value "' + value + '". This is most likely a bug.'
@@ -3620,7 +3620,7 @@ Ext.JSON.encodeDate = function(d) {
                 if (safe === true) {
                     return null;
                 }
-                Ext.Error.raise({
+                return Ext.Error.raise({
                     sourceClass: "Ext.JSON",
                     sourceMethod: "decode",
                     msg: "You're trying to decode an invalid JSON String: " + json
@@ -12726,7 +12726,6 @@ Ext.dom.Element.override({
         else return function() {
             var rect = this.dom.getBoundingClientRect(),
                 round = Math.round;
-
             return [round(rect.left + window.pageXOffset), round(rect.top + window.pageYOffset)];
         }
     }(),

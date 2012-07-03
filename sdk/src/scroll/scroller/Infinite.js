@@ -239,8 +239,9 @@ Ext.define('Ext.scroll.scroller.Infinite', {
             style.left = position;
         }
         else {
-            if (Ext.os.is.iOS || Ext.os.is.Android3) {
+            if (Ext.os.is.iOS || Ext.os.is.Android3 || Ext.browser.is.Firefox) {
                 style.webkitTransform = 'translate3d(0px, ' + position + ', 0px)';
+                style.mozTransform = 'translate3d(0px, ' + position + ', 0px)';
             }
             else {
                 style.top = position;
@@ -301,8 +302,9 @@ Ext.define('Ext.scroll.scroller.Infinite', {
 
 //        style.display = 'none';
 
-        if (Ext.os.is.iOS || Ext.os.is.Android3) {
+        if (Ext.os.is.iOS || Ext.os.is.Android3 || Ext.browser.is.Firefox) {
             style.webkitTransform = 'translate3d(0px, -10000px, 0px)';
+            style.mozTransform = 'translate3d(0px, -10000px, 0px)';
         }
         else {
             style.top = '-10000px';

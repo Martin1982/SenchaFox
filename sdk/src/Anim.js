@@ -186,6 +186,7 @@ Ext.Anim = Ext.extend(Object, {
         el.un('transitionend', me.onTransitionEnd, me);
 
         style.webkitTransitionDuration = '0ms';
+        style.mozTransitionDuration = '0ms';
         for (property in config.from) {
             if (!config.from.hasOwnProperty(property)) {
                 continue;
@@ -204,13 +205,18 @@ Ext.Anim = Ext.extend(Object, {
                 el.parent().setStyle({
                     // See https://sencha.jira.com/browse/TOUCH-1498
                     '-webkit-perspective': '1200',
-                    '-webkit-transform-style': 'preserve-3d'
+                    '-moz-perspective': '1200',
+                    '-webkit-transform-style': 'preserve-3d',
+                    '-moz-transform-style': 'preserve-3d'
                 });
             }
 
             style.webkitTransitionDuration = config.duration + 'ms';
+            style.mozTransitionDuration = config.duration + 'ms';
             style.webkitTransitionProperty = 'all';
+            style.mozTransitionProperty = 'all';
             style.webkitTransitionTimingFunction = config.easing;
+            style.mozTransitionTimingFunction = config.easing;
 
             // Bind our listener that fires after the animation ends
             el.on('transitionend', me.onTransitionEnd, me, {
@@ -253,13 +259,18 @@ Ext.Anim = Ext.extend(Object, {
         }
 
         style.webkitTransitionDuration = null;
+        style.mozTransitionDuration = null;
         style.webkitTransitionProperty = null;
+        style.mozTransitionProperty = null;
         style.webkitTransitionTimingFunction = null;
+        style.mozTransitionTimingFunction = null;
 
         if (config.is3d) {
             el.parent().setStyle({
                 '-webkit-perspective': '',
-                '-webkit-transform-style': ''
+                '-moz-perspective': '',
+                '-webkit-transform-style': '',
+                '-moz-transform-style': ''
             });
         }
 
@@ -414,11 +425,13 @@ Ext.anims = {
 
             this.from = {
                 '-webkit-transform': 'translate3d(' + fromX + 'px, ' + fromY + 'px, 0)',
+                '-moz-transform': 'translate3d(' + fromX + 'px, ' + fromY + 'px, 0)',
                 'z-index': zIndex,
                 'opacity': currentOpacity - 0.01
             };
             this.to = {
                 '-webkit-transform': 'translate3d(' + toX + 'px, ' + toY + 'px, 0)',
+                '-moz-transform': 'translate3d(' + toX + 'px, ' + toY + 'px, 0)',
                 'z-index': zIndex,
                 'opacity': currentOpacity
             };
@@ -456,14 +469,18 @@ Ext.anims = {
 
             this.from = {
                 '-webkit-transform': 'scale(' + fromScale + ')',
+                '-moz-transform': 'scale(' + fromScale + ')',
                 '-webkit-transform-origin': '50% 50%',
+                '-moz-transform-origin': '50% 50%',
                 'opacity': fromOpacity,
                 'z-index': fromZ
             };
 
             this.to = {
                 '-webkit-transform': 'scale(' + toScale + ')',
+                '-moz-transform': 'scale(' + toScale + ')',
                 '-webkit-transform-origin': '50% 50%',
+                '-moz-transform-origin': '50% 50%',
                 'opacity': toOpacity,
                 'z-index': toZ
             };
@@ -503,11 +520,15 @@ Ext.anims = {
 
             this.from = {
                 '-webkit-transform': 'rotate' + rotateProp + '(' + fromRotate + 'deg) scale(' + fromScale + ')',
-                '-webkit-backface-visibility': 'hidden'
+                '-moz-transform': 'rotate' + rotateProp + '(' + fromRotate + 'deg) scale(' + fromScale + ')',
+                '-webkit-backface-visibility': 'hidden',
+                '-moz-backface-visibility': 'hidden'
             };
             this.to = {
                 '-webkit-transform': 'rotate' + rotateProp + '(' + toRotate + 'deg) scale(' + toScale + ')',
-                '-webkit-backface-visibility': 'hidden'
+                '-moz-transform': 'rotate' + rotateProp + '(' + toRotate + 'deg) scale(' + toScale + ')',
+                '-webkit-backface-visibility': 'hidden',
+                '-moz-backface-visibility': 'hidden'
             };
         }
     }),
@@ -578,11 +599,15 @@ Ext.anims = {
 
             this.from = {
                 '-webkit-transform': 'rotate' + rotateProp + '(' + fromRotate + 'deg)' + (showTranslateZ ? ' translateZ(' + fromZ + 'px)': '') + fromTranslate,
-                '-webkit-transform-origin': origin
+                '-moz-transform': 'rotate' + rotateProp + '(' + fromRotate + 'deg)' + (showTranslateZ ? ' translateZ(' + fromZ + 'px)': '') + fromTranslate,
+                '-webkit-transform-origin': origin,
+                '-moz-transform-origin': origin
             };
             this.to = {
                 '-webkit-transform': 'rotate' + rotateProp + '(' + toRotate + 'deg) translateZ(' + toZ + 'px)' + toTranslate,
-                '-webkit-transform-origin': origin
+                '-moz-transform': 'rotate' + rotateProp + '(' + toRotate + 'deg) translateZ(' + toZ + 'px)' + toTranslate,
+                '-webkit-transform-origin': origin,
+                '-moz-transform-origin': origin
             };
         },
         duration: 250

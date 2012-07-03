@@ -359,6 +359,9 @@ Ext.define('Ext.event.publisher.Dom', {
         if ('webkitMatchesSelector' in element) {
             return element.webkitMatchesSelector(selector);
         }
+        if ('mozMatchesSelector' in element) {
+            return element.mozMatchesSelector(selector);
+        }
 
         return Ext.DomQuery.is(element, selector);
     },

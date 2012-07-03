@@ -1,3 +1,7 @@
+Ext.Loader.setPath({
+    'Ext': 'sdk/src'
+});
+
 /**
  * Ext.application is the heart of your app. It sets the application name, can specify the icon and startup images to
  * use when your app is added to the home screen, and sets up your application's dependencies - usually the models,
@@ -5,6 +9,9 @@
  */
 Ext.application({
     name: 'Kitchensink',
+
+
+    requires: ['Ext.data.Store'],
 
     //sets up the icon and startup screens for when the app is added to a phone/tablet home screen
 
