@@ -24,11 +24,7 @@ Ext.define('Ext.viewport.Viewport', {
                 break;
 
             default:
-                if (Ext.browser.is.Firefox) {
-                    viewportName = 'Android';
-                } else {
-                    viewportName = 'Default';
-                }
+                viewportName = 'Default';
         }
 
         viewport = Ext.create('Ext.viewport.' + viewportName, config);
