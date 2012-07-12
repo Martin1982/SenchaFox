@@ -16,7 +16,7 @@ $panel-border-radius: .3em;
       padding: 6px;
       @if $include-border-radius { @include border-radius($panel-border-radius); }
       -webkit-box-shadow: rgba(0,0,0,.8) 0 .2em .6em;
-      -moz-box-shadow: rgba(0,0,0,.8) 0 .2em .6em; // @todo @untested-property
+      box-shadow: rgba(0,0,0,.8) 0 .2em .6em; // @todo @untested-property
       @include background-gradient(darken($base-color, 40%), 'flat');
 
       &.x-floating-light {
