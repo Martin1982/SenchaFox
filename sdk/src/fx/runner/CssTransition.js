@@ -300,7 +300,6 @@ Ext.define('Ext.fx.runner.CssTransition', {
 
                         if (!isLengthProperty) {
                             fromFormattedValue = this.getCssStyleValue(formattedName, fromFormattedValue);
-                            console.log(from[name],fromFormattedValue);
                         }
 
                         if (toFormattedValue !== fromFormattedValue) {
