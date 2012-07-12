@@ -210,7 +210,14 @@ Ext.define('Ext.fx.runner.CssTransition', {
             iframeDocument.writeln('</body>');
             iframeDocument.close();
 
-            this.testElement = testElement = iframeDocument.createElement('div');
+            /**
+             * @hack Firefox cannot reuse the test element, it will not adjust the transform values
+             */
+            if (Ext.browser.is.firefox) {
+                testElement = iframeDocument.createElement('div');
+            } else {
+                this.testElement = testElement = iframeDocument.createElement('div');
+            }
             testElement.style.setProperty('position', 'absolute', '!important');
             iframeDocument.body.appendChild(testElement);
             this.testElementComputedStyle = window.getComputedStyle(testElement);
@@ -293,6 +300,7 @@ Ext.define('Ext.fx.runner.CssTransition', {
 
                         if (!isLengthProperty) {
                             fromFormattedValue = this.getCssStyleValue(formattedName, fromFormattedValue);
+                            console.log(from[name],fromFormattedValue);
                         }
 
                         if (toFormattedValue !== fromFormattedValue) {
