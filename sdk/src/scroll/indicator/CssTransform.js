@@ -65,15 +65,15 @@ Ext.define('Ext.scroll.indicator.CssTransform', {
 
         if (axis === 'x') {
             endElementStyle.webkitTransform = 'translate3d(' + endElementOffset + 'px, 0, 0)';
-            endElementStyle.mozTransform = 'translate3d(' + endElementOffset + 'px, 0, 0)';
+            endElementStyle.MozTransform = 'translate3d(' + endElementOffset + 'px, 0, 0)';
             middleElementStyle.webkitTransform = 'translate3d(0, 0, 0) scaleX(' + middleElementLength + ')';
-            middleElementStyle.mozTransform = 'translate3d(0, 0, 0) scaleX(' + middleElementLength + ')';
+            middleElementStyle.MozTransform = 'translate3d(0, 0, 0) scaleX(' + middleElementLength + ')';
         }
         else {
             endElementStyle.webkitTransform = 'translate3d(0, ' + endElementOffset + 'px, 0)';
-            endElementStyle.mozTransform = 'translate3d(0, ' + endElementOffset + 'px, 0)';
+            endElementStyle.MozTransform = 'translate3d(0, ' + endElementOffset + 'px, 0)';
             middleElementStyle.webkitTransform = 'translate3d(0, 0, 0) scaleY(' + middleElementLength + ')';
-            middleElementStyle.mozTransform = 'translate3d(0, 0, 0) scaleY(' + middleElementLength + ')';
+            middleElementStyle.MozTransform = 'translate3d(0, 0, 0) scaleY(' + middleElementLength + ')';
         }
     },
 
@@ -109,11 +109,11 @@ Ext.define('Ext.scroll.indicator.CssTransform', {
 
         if (axis === 'x') {
             elementStyle.webkitTransform = 'translate3d(' + offset + 'px, 0, 0)';
-            elementStyle.mozTransform = 'translate3d(' + offset + 'px, 0, 0)';
+            elementStyle.MozTransform = 'translate3d(' + offset + 'px, 0, 0)';
         }
         else {
             elementStyle.webkitTransform = 'translate3d(0, ' + offset + 'px, 0)';
-            elementStyle.mozTransform = 'translate3d(0, ' + offset + 'px, 0)';
+            elementStyle.MozTransform = 'translate3d(0, ' + offset + 'px, 0)';
         }
     }
 });

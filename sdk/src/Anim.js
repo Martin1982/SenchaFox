@@ -186,7 +186,7 @@ Ext.Anim = Ext.extend(Object, {
         el.un('transitionend', me.onTransitionEnd, me);
 
         style.webkitTransitionDuration = '0ms';
-        style.mozTransitionDuration = '0ms';
+        style.MozTransitionDuration = '0ms';
         for (property in config.from) {
             if (!config.from.hasOwnProperty(property)) {
                 continue;
@@ -212,11 +212,11 @@ Ext.Anim = Ext.extend(Object, {
             }
 
             style.webkitTransitionDuration = config.duration + 'ms';
-            style.mozTransitionDuration = config.duration + 'ms';
+            style.MozTransitionDuration = config.duration + 'ms';
             style.webkitTransitionProperty = 'all';
-            style.mozTransitionProperty = 'all';
+            style.MozTransitionProperty = 'all';
             style.webkitTransitionTimingFunction = config.easing;
-            style.mozTransitionTimingFunction = config.easing;
+            style.MozTransitionTimingFunction = config.easing;
 
             // Bind our listener that fires after the animation ends
             el.on('transitionend', me.onTransitionEnd, me, {
@@ -259,11 +259,11 @@ Ext.Anim = Ext.extend(Object, {
         }
 
         style.webkitTransitionDuration = null;
-        style.mozTransitionDuration = null;
+        style.MozTransitionDuration = null;
         style.webkitTransitionProperty = null;
-        style.mozTransitionProperty = null;
+        style.MozTransitionProperty = null;
         style.webkitTransitionTimingFunction = null;
-        style.mozTransitionTimingFunction = null;
+        style.MozTransitionTimingFunction = null;
 
         if (config.is3d) {
             el.parent().setStyle({

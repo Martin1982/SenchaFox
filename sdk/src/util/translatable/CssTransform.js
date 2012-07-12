@@ -18,7 +18,7 @@ Ext.define('Ext.util.translatable.CssTransform', {
         }
 
         domStyle.webkitTransform = 'translate3d(' + x + 'px, ' + y + 'px, 0px)';
-        domStyle.mozTransform = 'translate3d(' + x + 'px, ' + y + 'px, 0px)';
+        domStyle.MozTransform = 'translate3d(' + x + 'px, ' + y + 'px, 0px)';
 
         return this.callParent(arguments);
     },
@@ -28,7 +28,7 @@ Ext.define('Ext.util.translatable.CssTransform', {
 
         if (element && !element.isDestroyed) {
             element.dom.style.webkitTransform = null;
-            element.dom.style.mozTransform = null;
+            element.dom.style.MozTransform = null;
         }
 
         this.callParent(arguments);
