@@ -18,7 +18,7 @@ Ext.define('Ext.fx.animation.Fade', {
 
         before: {
             display: null,
-            opacity: 0
+            opacity: 0.0
         },
 
         after: {
@@ -32,11 +32,11 @@ Ext.define('Ext.fx.animation.Fade', {
             from = this.getFrom();
 
         if (newOut) {
-            from.set('opacity', 1);
-            to.set('opacity',   0);
+            from.set('opacity', 1.0);
+            to.set('opacity',   0.0);
         } else {
-            from.set('opacity', 0);
-            to.set('opacity',   1);
+            from.set('opacity', 0.0);
+            to.set('opacity',   1.0);
         }
     }
 });
