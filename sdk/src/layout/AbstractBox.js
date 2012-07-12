@@ -191,7 +191,7 @@ Ext.define('Ext.layout.AbstractBox', {
         }
 
         element.dom.style.webkitBoxFlex = flex;
-        element.dom.style.mozBoxFlex = flex;
+        element.dom.style.MozBoxFlex = flex;
     },
 
     convertPosition: function(position) {
@@ -208,7 +208,7 @@ Ext.define('Ext.layout.AbstractBox', {
 
     updateAlign: function(align) {
         this.container.innerElement.dom.style.webkitBoxAlign = align;
-        this.container.innerElement.dom.style.mozBoxAlign = align;
+        this.container.innerElement.dom.style.MozBoxAlign = align;
     },
 
     applyPack: function(pack) {
@@ -217,6 +217,6 @@ Ext.define('Ext.layout.AbstractBox', {
 
     updatePack: function(pack) {
         this.container.innerElement.dom.style.webkitBoxPack = pack;
-        this.container.innerElement.dom.style.mozBoxPack = pack;
+        this.container.innerElement.dom.style.MozBoxPack = pack;
     }
 });
