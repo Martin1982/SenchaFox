@@ -6135,7 +6135,7 @@ audio {
   -moz-border-radius: 0.3em;
   border-radius: 0.3em;
   -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 0.2em 0.6em;
-  -moz-box-shadow: rgba(0, 0, 0, 0.8) 0 0.2em 0.6em;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0.2em 0.6em;
   background-image: none;
   background-color: #03111a;
 }
@@ -7739,6 +7739,11 @@ audio {
   background-image: linear-gradient(top, #0398ff, #007ad0 3%, #005c9d);
   color: white;
   text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
+}
+
+/** @hack firefox due to bug https://bugzilla.mozilla.org/show_bug.cgi?id=308801 **/
+.x-firefox .x-list .x-list-item .x-list-item-label {
+  min-height: 0px;
 }
 
 .x-list-header {
