@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "name": "SenchaFox",
+  "description": "Playground project to run Sencha Touch 2 on B2G",
+  "icons": {
+    "57": "resources/icons/Icon.png",
+    "114": "resources/icons/Icon@2x.png",
+	"72": "resources/icons/Icon@72.png",
+	"144": "resources/icons/Icon@144.png"
+  },
+  "developer": {
+    "name": "Martin de Keijzer",
+    "url": "http://www.martindekeijzer.nl"
+  },
+  "installs_allowed_from": ["*"],
+  "appcache_path": "/cache.manifest"
+}
