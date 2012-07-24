@@ -371,11 +371,15 @@ Ext.define('Ext.dataview.NestedList', {
     },
 
     onBeforeDetailContainerChange: function() {
-        this.isGoingTo = true;
+        // @hacked isGoingTo no longer used, it's use is unknown (tested FF16/Saf5.1)
+        console.warn('Hack onBeforeDetailContainerChange in progress...');
+//        this.isGoingTo = true;
     },
 
     onDetailContainerChange: function() {
-        this.isGoingTo = false;
+        // @hacked isGoingTo no longer used, it's use is unknown (tested FF16/Saf5.1)
+        console.warn('Hack on(After)DetailContainerChange in progress...');
+//        this.isGoingTo = false;
     },
 
     /**
