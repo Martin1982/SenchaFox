@@ -16,7 +16,7 @@ Ext.define('Kitchensink.view.Audio', {
             {
                 xtype: 'audio',
                 cls: 'myAudio',
-                url: '../audio/crash.mp3',
+                url: 'resources/media/crash.mp3',
                 loop: true,
                 enableControls: false
             },
@@ -40,8 +40,9 @@ Ext.define('Kitchensink.view.Audio', {
             {
                 xtype: 'audio',
                 cls: 'myAudio',
-                url: '../audio/crash.mp3',
-                loop: true
+                url: 'resources/media/crash.mp3',
+                loop: true,
+                enableControls: true
             }
         ]
     }

@@ -10,9 +10,13 @@ Ext.define('Kitchensink.view.Video', {
         layout: 'fit',
         items: [{
             xtype: 'video',
-            url: ['../video/resources/media/BigBuck.m4v', '../video/resources/media/BigBuck.webm'],
+            url: [
+                'resources/media/BigBuck.m4v',
+                'video/resources/media/BigBuck.webm',
+                'video/resources/media/BigBuck.ogv'
+            ],
             loop: true,
-            posterUrl: '../video/resources/images/cover.jpg'
+            posterUrl: 'resources/images/cover.jpg'
         }]
     }
 });
