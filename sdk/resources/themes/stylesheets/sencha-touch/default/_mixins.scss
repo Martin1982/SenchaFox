@@ -77,9 +77,9 @@ $default-gradient: $base-gradient;
 @mixin bevel-box($type: 'light') {
   @if $include-highlights {
     @if $type == shadow {
-      -webkit-box-shadow: rgba(#000, .5) 0 -.06em 0;
+      @include single-box-shadow(rgba(#000, .5), 0, -.06em, 0);
     } @else {
-      -webkit-box-shadow: rgba(#fff, .35) 0 .06em 0;
+      @include single-box-shadow(rgba(#fff, .35), 0, .06em, 0);
     }
   }
 }
